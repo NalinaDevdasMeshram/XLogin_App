@@ -18,14 +18,13 @@ import { useState } from "react";
   
   return (
     <div>
-       {message && <p>{message}</p>} 
-     
-      { isvisibleform && (
+       <h1>Login App</h1>
+       <div>{message && <p>{message}</p>}</div>
+    {isvisibleform && (
        <form onSubmit={handleSubmit} >
-        <h1>Login App</h1>
+        {/* <h1>Login App</h1> */}
         <div>
-         <label>
-          Username:
+         <label>Username: </label>
            <input 
           type="text" 
           placeholder="username" 
@@ -33,11 +32,10 @@ import { useState } from "react";
           value={Username} 
           onChange={(e)=>setUsername(e.target.value)}
           required/>
-         </label>
+        
          </div>
          <div>
-         <label>
-          Password:
+         <label>Password: </label>
           <input 
           type="password" 
           placeholder="password"  
@@ -45,7 +43,7 @@ import { useState } from "react";
           value={Password} 
           onChange={(e)=>setPassword(e.target.value)} 
           required/>
-         </label>
+        
          </div>
          <button type="submit">Submit</button>
       </form>
