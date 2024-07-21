@@ -21,7 +21,7 @@ import { useState } from "react";
         <div>
          <label>
           Username:
-          <input 
+           <input 
           type="text" 
           placeholder="username" 
           id="username" 
