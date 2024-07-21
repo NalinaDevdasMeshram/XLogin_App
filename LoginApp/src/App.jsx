@@ -12,7 +12,7 @@ import { useState } from "react";
              setMessage('Welcome, user !')
               setIsvisible(false)
         }else{
-          setMessage('Invalid Username or Password')
+          setMessage('Invalid username or password')
         }
   }
   
