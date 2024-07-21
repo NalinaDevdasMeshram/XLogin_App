@@ -8,7 +8,7 @@ import { useState } from "react";
  
   const handleSubmit =(e)=>{
         e.preventDefault();
-        if(Username === 'user' || Password === 'password'){
+        if(Username === 'user' && Password === 'password'){
              setMessage('Welcome, User !')
               setIsvisible(false)
         }else{
