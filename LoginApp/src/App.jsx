@@ -4,11 +4,13 @@ import { useState } from "react";
   const [Username, setUsername] = useState('');
   const [Password, setPassword] = useState('');
   const [message, setMessage] = useState('');
+  const [isvisibleform, setIsvisible] = useState(true)
  
   const handleSubmit =(e)=>{
         e.preventDefault();
         if(Username === 'user' || Password === 'password'){
-             setMessage('Welcome, User!')
+             setMessage('Welcome, User !')
+              setIsvisible(false)
         }else{
           setMessage('Invalid Username or Password')
         }
@@ -16,7 +18,10 @@ import { useState } from "react";
   
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+       {message && <p>{message}</p>} 
+     
+      { isvisibleform && (
+       <form onSubmit={handleSubmit} >
         <h1>Login App</h1>
         <div>
          <label>
@@ -44,7 +49,7 @@ import { useState } from "react";
          </div>
          <button type="submit">Submit</button>
       </form>
-      {message && <p>{message}</p>}
+     )}
     </div>
   )
 }
