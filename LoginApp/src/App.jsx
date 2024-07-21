@@ -19,7 +19,8 @@ import { useState } from "react";
   return (
     <div>
        <h1>Login App</h1>
-       <div><span>{message && <p>{message}</p>}</span></div>
+       {console.log('message:', message)}
+       <p><span>{message}</span></p>
     {isvisibleform && (
        <form onSubmit={handleSubmit} >
         
